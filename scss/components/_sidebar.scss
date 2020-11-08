@@ -23,6 +23,69 @@
     height: 100%;
   }
 
+  &__navlist {
+    position: absolute;
+    background-color: $color-white;
+    width: 20rem;
+    z-index: 999;
+    left: 55px;
+    border-radius: 0.4rem;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.15);
+    top: 200px;
+    padding: 0.5rem 0.5rem;
+
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: row;
+    padding: 0.8rem 0.5rem;
+    margin: 0.4rem 0;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    box-shadow: 1px 2px 5px -2px rgba(0,0,0,0.15);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $color-grey-200;
+    }
+  }
+
+  &__imgbox {
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
+    background-color: $color-purple-500;
+    border-radius: 50%;
+    padding: 0.9rem 0.3rem;
+    margin: 0 1rem;
+
+    &--text {
+      font-size: 1.5rem;
+      color: $color-white;
+      text-align: center;
+      font-weight: 600;
+    }
+  }
+
+  &__textview {
+    text-align: left;
+
+    &--title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: $color-dark-300;
+    }
+
+    &--smtext {
+      font-style: italic;
+      color: $color-green-500;
+      font-size: 1.1rem;
+    }
+  }
+
   &__iconview {
     fill: $color-grey-100;
     width: 4rem;
@@ -39,4 +102,9 @@
         background-color: $color-red-600;
     }
   }
+}
+
+.show_side {
+  visibility: visible;
+  opacity: 1;
 }

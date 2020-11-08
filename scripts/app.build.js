@@ -105,3 +105,7 @@ new KtWidget({ selectorOpen: "#card-listopen-14", selectorWidget: "#card-listvie
 new KtWidget({ selectorOpen: "#card-listopen-15", selectorWidget: "#card-listview-15", classSelector: "show_listview" });
 new KtWidget({ selectorOpen: "#card-listopen-16", selectorWidget: "#card-listview-16", classSelector: "show_listview" });
 new KtWidget({ selectorOpen: "#navbar_open", selectorWidget: "#navbar_drop", classSelector: "show_dropdown" });
+new KtWidget({ selectorOpen: "#navbar_open", selectorWidget: "#navbar_drop", classSelector: "show_dropdown" });
+new KtWidget({ selectorOpen: "#sidenav_explore", selectorWidget: "#sidenav_explore_open", classSelector: "show_side" });
+
+
