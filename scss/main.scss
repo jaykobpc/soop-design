@@ -1,0 +1,21 @@
+//abstracts
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+
+//base
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+
+//components
+@import "components/cardview";
+@import "components/navbar";
+@import "components/onboarding";
+@import "components/optionsviewmodal";
+@import "components/sidebar";
+
+//layouts
+
+//pages
+@import "pages/home.scss";

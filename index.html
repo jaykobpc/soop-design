@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#4b64f2">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link href="./style/app.build.css" rel="stylesheet">
+    <title>SOOP-Design</title>
+</head>
+
+<body translate="no" class="no-select">
+
+    <div id="app">
+        <div class="app__wrapper">
+            <!-- side navigation-->
+            <aside class="sidenav">
+                <div class="sidenav__container">
+                    <div title="Explore" class="sidenav__iconview">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M12 10.9c-.61 0-1.1.49-1.1 1.1s.49 1.1 1.1 1.1c.61 0 1.1-.49 1.1-1.1s-.49-1.1-1.1-1.1zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm2.19 12.19L6 18l3.81-8.19L18 6l-3.81 8.19z" />
+                        </svg>
+                    </div>
+                    <div title="Help" class="sidenav__iconview">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z" />
+                        </svg>
+                    </div>
+                    <div title="Settings" class="sidenav__iconview">
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                            viewBox="0 0 24 24" width="24">
+                            <g>
+                                <path d="M0,0h24v24H0V0z" fill="none" />
+                                <path
+                                    d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div title="End session" class="sidenav__iconview">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z" />
+                        </svg>
+                    </div>
+                </div>
+            </aside>
+            <!-- main view section -->
+            <main id="wxmainview" class="main">
+                <!-- main header component-->
+                <header id="navbar" class="navbar">
+                    <div class="navbar__container">
+                        <div class="navbar__logo">
+                            <img src="./img/Soop Only Logo RGB.svg" alt="Logo" class="navbar__logo--img">
+                        </div>
+                        <div class="navbar__searchbox">
+                            <input type="text" placeholder="Search here..." class="navbar__searchbox--input">
+                        </div>
+                        <div class="navbar__widgets">
+                            <div class="navbar__profile">
+                                <img src="./img/profile_image.jpeg" alt="Profile" class="navbar__profile--img">
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <!-- section navigation -->
+                <section class="wxcontainer">
+                    <div class="wxcontainer__titlebox">
+                        <h3 class="wxcontainer__titlebox--text">Manjaro</h3>
+                    </div>
+                    <div class="wxcontainer__gridview">
+                        <div class="cardview">
+                            <div class="cardview__imgbox">
+                                <img src="./img/analytics.png" alt="Analytics and Reports"
+                                    class="cardview__imgbox--img">
+                                <div id="card-listopen-1" class="cardview__imgbox--iconview">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="cardview__titlebox">
+                                <h3 class="cardview__titlebox--text">Analytics &amp; Reports</h3>
+                            </div>
+                            <div class="cardview__textview">
+                                <p class="cardview__textview--text">Manage and get full analytical reports built from
+                                    your resturant</p>
+                            </div>
+                            <div id="card-listview-1" class="cardview__listview">
+                                <a href="#/" class="cardview__listview--link">Link 1</a>
+                                <a href="#/" class="cardview__listview--link">Link 2</a>
+                                <a href="#/" class="cardview__listview--link">Link 3</a>
+                                <a href="#/" class="cardview__listview--link">Link 4</a>
+                            </div>
+                        </div>
+                        <div class="cardview">
+                            <div class="cardview__imgbox">
+                                <img src="./img/global.png" alt="Global operations and drill"
+                                    class="cardview__imgbox--img">
+                                <div id="card-listopen-2" title="Options" class="cardview__imgbox--iconview">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="cardview__titlebox">
+                                <h3 class="cardview__titlebox--text">Global Operations Drill</h3>
+                            </div>
+                            <div class="cardview__textview">
+                                <p class="cardview__textview--text">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                    and some other</p>
+                            </div>
+                            <div id="card-listview-2" class="cardview__listview">
+                                <a href="#/" class="cardview__listview--link">Link 1</a>
+                                <a href="#/" class="cardview__listview--link">Link 2</a>
+                                <a href="#/" class="cardview__listview--link">Link 3</a>
+                                <a href="#/" class="cardview__listview--link">Link 4</a>
+                            </div>
+                        </div>
+                        <div class="cardview">
+                            <div class="cardview__imgbox">
+                                <img src="./img/personnel.png" alt="Personnel and Labour" class="cardview__imgbox--img">
+                                <div id="card-listopen-3" title="Options" class="cardview__imgbox--iconview">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="cardview__titlebox">
+                                <h3 class="cardview__titlebox--text">Personnel &amp; Labour</h3>
+                            </div>
+                            <div class="cardview__textview">
+                                <p class="cardview__textview--text">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                    and some other</p>
+                            </div>
+                            <div id="card-listview-3" class="cardview__listview">
+                                <a href="#/" class="cardview__listview--link">Link 1</a>
+                                <a href="#/" class="cardview__listview--link">Link 2</a>
+                                <a href="#/" class="cardview__listview--link">Link 3</a>
+                                <a href="#/" class="cardview__listview--link">Link 4</a>
+                            </div>
+                        </div>
+                        <div class="cardview">
+                            <div class="cardview__imgbox">
+                                <img src="./img/purchases.png" alt="Purchases" class="cardview__imgbox--img">
+                                <div id="card-listopen-4" title="Options" class="cardview__imgbox--iconview">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="cardview__titlebox">
+                                <h3 class="cardview__titlebox--text">Purchasing</h3>
+                            </div>
+                            <div class="cardview__textview">
+                                <p class="cardview__textview--text">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                    and some other</p>
+                            </div>
+                            <div id="card-listview-4" class="cardview__listview">
+                                <a href="#/" class="cardview__listview--link">Link 1</a>
+                                <a href="#/" class="cardview__listview--link">Link 2</a>
+                                <a href="#/" class="cardview__listview--link">Link 3</a>
+                                <a href="#/" class="cardview__listview--link">Link 4</a>
+                            </div>
+                        </div>
+                        <div class="cardview">
+                            <div class="cardview__imgbox">
+                                <img src="./img/foodAndDrinks.png" alt="F & B Management" class="cardview__imgbox--img">
+                                <div id="card-listopen-5" title="Options" class="cardview__imgbox--iconview">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="cardview__titlebox">
+                                <h3 class="cardview__titlebox--text">F &amp; B Management</h3>
+                            </div>
+                            <div class="cardview__textview">
+                                <p class="cardview__textview--text">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                    and some other</p>
+                            </div>
+                            <div id="card-listview-5" class="cardview__listview">
+                                <a href="#/" class="cardview__listview--link">Link 1</a>
+                                <a href="#/" class="cardview__listview--link">Link 2</a>
+                                <a href="#/" class="cardview__listview--link">Link 3</a>
+                                <a href="#/" class="cardview__listview--link">Link 4</a>
+                            </div>
+                        </div>
+                        <div class="cardview">
+                            <div class="cardview__imgbox">
+                                <img src="./img/menu.png" alt="Menu Items" class="cardview__imgbox--img">
+                                <div id="card-listopen-6" title="Options" class="cardview__imgbox--iconview">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="cardview__titlebox">
+                                <h3 class="cardview__titlebox--text">Menu Items</h3>
+                            </div>
+                            <div class="cardview__textview">
+                                <p class="cardview__textview--text">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                    and some other</p>
+                            </div>
+                            <div id="card-listview-6" class="cardview__listview">
+                                <a href="#/" class="cardview__listview--link">Link 1</a>
+                                <a href="#/" class="cardview__listview--link">Link 2</a>
+                                <a href="#/" class="cardview__listview--link">Link 3</a>
+                                <a href="#/" class="cardview__listview--link">Link 4</a>
+                            </div>
+                        </div>
+                        <div class="cardview">
+                            <div class="cardview__imgbox">
+                                <img src="./img/customerManagement.png" alt="Customer Management"
+                                    class="cardview__imgbox--img">
+                                <div id="card-listopen-7" title="Options" class="cardview__imgbox--iconview">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="cardview__titlebox">
+                                <h3 class="cardview__titlebox--text">Customer Management</h3>
+                            </div>
+                            <div class="cardview__textview">
+                                <p class="cardview__textview--text">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                    and some other</p>
+                            </div>
+                            <div id="card-listview-7" class="cardview__listview">
+                                <a href="#/" class="cardview__listview--link">Link 1</a>
+                                <a href="#/" class="cardview__listview--link">Link 2</a>
+                                <a href="#/" class="cardview__listview--link">Link 3</a>
+                                <a href="#/" class="cardview__listview--link">Link 4</a>
+                            </div>
+                        </div>
+                        <div class="cardview">
+                            <div class="cardview__imgbox">
+                                <img src="./img/socialMedia.png" alt="Social Media" class="cardview__imgbox--img">
+                                <div id="card-listopen-8" title="Options" class="cardview__imgbox--iconview">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="cardview__titlebox">
+                                <h3 class="cardview__titlebox--text">Marketing &amp; Social media</h3>
+                            </div>
+                            <div class="cardview__textview">
+                                <p class="cardview__textview--text">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                    and some other</p>
+                            </div>
+                            <div id="card-listview-8" class="cardview__listview">
+                                <a href="#/" class="cardview__listview--link">Link 1</a>
+                                <a href="#/" class="cardview__listview--link">Link 2</a>
+                                <a href="#/" class="cardview__listview--link">Link 3</a>
+                                <a href="#/" class="cardview__listview--link">Link 4</a>
+                            </div>
+                        </div>
+                        <div class="cardview">
+                            <div class="cardview__imgbox">
+                                <img src="./img/revenueCenters.png" alt="RVC Information" class="cardview__imgbox--img">
+                                <div id="card-listopen-9" title="Options" class="cardview__imgbox--iconview">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="cardview__titlebox">
+                                <h3 class="cardview__titlebox--text">RVC Information</h3>
+                            </div>
+                            <div class="cardview__textview">
+                                <p class="cardview__textview--text">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                    and some other</p>
+                            </div>
+                            <div id="card-listview-9" class="cardview__listview">
+                                <a href="#/" class="cardview__listview--link">Link 1</a>
+                                <a href="#/" class="cardview__listview--link">Link 2</a>
+                                <a href="#/" class="cardview__listview--link">Link 3</a>
+                                <a href="#/" class="cardview__listview--link">Link 4</a>
+                            </div>
+                        </div>
+                        <div class="cardview">
+                            <div class="cardview__imgbox">
+                                <img src="./img/admin.png" alt="Admin Area" class="cardview__imgbox--img">
+                                <div id="card-listopen-10" title="Options" class="cardview__imgbox--iconview">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="cardview__titlebox">
+                                <h3 class="cardview__titlebox--text">Administrator</h3>
+                            </div>
+                            <div class="cardview__textview">
+                                <p class="cardview__textview--text">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                    and some other</p>
+                            </div>
+                            <div id="card-listview-10" class="cardview__listview">
+                                <a href="#/" class="cardview__listview--link">Link 1</a>
+                                <a href="#/" class="cardview__listview--link">Link 2</a>
+                                <a href="#/" class="cardview__listview--link">Link 3</a>
+                                <a href="#/" class="cardview__listview--link">Link 4</a>
+                            </div>
+                        </div>
+                        <div class="cardview">
+                            <div class="cardview__imgbox">
+                                <img src="./img/payments.png" alt="Payments" class="cardview__imgbox--img">
+                                <div id="card-listopen-11" title="Options" class="cardview__imgbox--iconview">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="cardview__titlebox">
+                                <h3 class="cardview__titlebox--text">Payments</h3>
+                            </div>
+                            <div class="cardview__textview">
+                                <p class="cardview__textview--text">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                    and some other</p>
+                            </div>
+                            <div id="card-listview-11" class="cardview__listview">
+                                <a href="#/" class="cardview__listview--link">Link 1</a>
+                                <a href="#/" class="cardview__listview--link">Link 2</a>
+                                <a href="#/" class="cardview__listview--link">Link 3</a>
+                                <a href="#/" class="cardview__listview--link">Link 4</a>
+                            </div>
+                        </div>
+                        <div class="cardview">
+                            <div class="cardview__imgbox">
+                                <img src="./img/nightAudit.png" alt="Night Audit" class="cardview__imgbox--img">
+                                <div id="card-listopen-12" title="Options" class="cardview__imgbox--iconview">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="cardview__titlebox">
+                                <h3 class="cardview__titlebox--text">Night Audit</h3>
+                            </div>
+                            <div class="cardview__textview">
+                                <p class="cardview__textview--text">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                    and some other</p>
+                            </div>
+                            <div id="card-listview-12" class="cardview__listview">
+                                <a href="#/" class="cardview__listview--link">Link 1</a>
+                                <a href="#/" class="cardview__listview--link">Link 2</a>
+                                <a href="#/" class="cardview__listview--link">Link 3</a>
+                                <a href="#/" class="cardview__listview--link">Link 4</a>
+                            </div>
+                        </div>
+                        <div class="cardview">
+                            <div class="cardview__imgbox">
+                                <img src="./img/budgets.png" alt="Budgets P & L" class="cardview__imgbox--img">
+                                <div id="card-listopen-13" title="Options" class="cardview__imgbox--iconview">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="cardview__titlebox">
+                                <h3 class="cardview__titlebox--text">Budgets and P &amp; L</h3>
+                            </div>
+                            <div class="cardview__textview">
+                                <p class="cardview__textview--text">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                    and some other</p>
+                            </div>
+                            <div id="card-listview-13" class="cardview__listview">
+                                <a href="#/" class="cardview__listview--link">Link 1</a>
+                                <a href="#/" class="cardview__listview--link">Link 2</a>
+                                <a href="#/" class="cardview__listview--link">Link 3</a>
+                                <a href="#/" class="cardview__listview--link">Link 4</a>
+                            </div>
+                        </div>
+                        <div class="cardview">
+                            <div class="cardview__imgbox">
+                                <img src="./img/foodAndHygiene.png" alt="Food and Hygiene"
+                                    class="cardview__imgbox--img">
+                                <div id="card-listopen-14" title="Options" class="cardview__imgbox--iconview">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="cardview__titlebox">
+                                <h3 class="cardview__titlebox--text">Food &amp; Hygiene Management</h3>
+                            </div>
+                            <div class="cardview__textview">
+                                <p class="cardview__textview--text">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                    and some other</p>
+                            </div>
+                            <div id="card-listview-14" class="cardview__listview">
+                                <a href="#/" class="cardview__listview--link">Link 1</a>
+                                <a href="#/" class="cardview__listview--link">Link 2</a>
+                                <a href="#/" class="cardview__listview--link">Link 3</a>
+                                <a href="#/" class="cardview__listview--link">Link 4</a>
+                            </div>
+                        </div>
+                        <div class="cardview">
+                            <div class="cardview__imgbox">
+                                <img src="./img/cctv.png" alt="CCTV Management" class="cardview__imgbox--img">
+                                <div id="card-listopen-15" title="Options" class="cardview__imgbox--iconview">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="cardview__titlebox">
+                                <h3 class="cardview__titlebox--text">CCTV Management</h3>
+                            </div>
+                            <div class="cardview__textview">
+                                <p class="cardview__textview--text">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                    and some other</p>
+                            </div>
+                            <div id="card-listview-15" class="cardview__listview">
+                                <a href="#/" class="cardview__listview--link">Link 1</a>
+                                <a href="#/" class="cardview__listview--link">Link 2</a>
+                                <a href="#/" class="cardview__listview--link">Link 3</a>
+                                <a href="#/" class="cardview__listview--link">Link 4</a>
+                            </div>
+                        </div>
+                        <div class="cardview">
+                            <div class="cardview__imgbox">
+                                <img src="./img/humanResource.png" alt="Human Resource" class="cardview__imgbox--img">
+                                <div id="card-listopen-16" title="Options" class="cardview__imgbox--iconview">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="cardview__titlebox">
+                                <h3 class="cardview__titlebox--text">Human Resource</h3>
+                            </div>
+                            <div class="cardview__textview">
+                                <p class="cardview__textview--text">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                    and some other</p>
+                            </div>
+                            <div id="card-listview-16" class="cardview__listview">
+                                <a href="#/" class="cardview__listview--link">Link 1</a>
+                                <a href="#/" class="cardview__listview--link">Link 2</a>
+                                <a href="#/" class="cardview__listview--link">Link 3</a>
+                                <a href="#/" class="cardview__listview--link">Link 4</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <!-- select resturant modal-->
+            <div class="wtt">
+                <div class="wtt__wrapper">
+                    <div class="wtt__container">
+                        <div class="wtt__titlebox">
+                            <h3 class="wtt__titlebox--text">Manage resturant : </h3>
+                        </div>
+                        <div class="wtt__listbox">
+                            <div class="wtt__card">
+                                <div class="wtt__profilebox">
+                                    <img src="./img/profile_image.jpeg" class="wtt__profilebox--img"
+                                        alt="profile resturant">
+                                </div>
+                                <div class="wtt__textview">
+                                    <h3 class="wtt__textview--title">Manjaro</h3>
+                                    <p class="wtt__textview--smtext">active</p>
+                                </div>
+                            </div>
+                            <div class="wtt__card">
+                                <div class="wtt__profilebox">
+                                    <img src="./img/profile_image.jpeg" class="wtt__profilebox--img"
+                                        alt="profile resturant">
+                                </div>
+                                <div class="wtt__textview">
+                                    <h3 class="wtt__textview--title">Rossana</h3>
+                                    <p class="wtt__textview--smtext wtt__hide">active</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="wtt__footer">
+                            <button class="wtt__footer--button theme-grey">Cancel</button>
+                            <button class="wtt__footer--button theme-blue">Confirm</button>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/app.build.js" defer></script>
+</body>
+
+</html>

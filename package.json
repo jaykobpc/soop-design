@@ -1,0 +1,17 @@
+{
+  "name": "soop-design",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:scss": "node-sass scss/main.scss style/app.build.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "node-sass": "^5.0.0",
+    "postcss-cli": "^8.2.0"
+  }
+}
