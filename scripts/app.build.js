@@ -19,6 +19,9 @@ if (wx_mainview) {
 
 allImages.forEach(function (img) {
   img.setAttribute("draggable", false);
+  img.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+  })
 });
 
 
@@ -28,6 +31,7 @@ allImages.forEach(function (img) {
   function KtWidget(params) {
     this.selectorOpen = null;
     this.selectorWidget = null;
+    this.classSelector = null;
     var self = this;
 
     if (typeof params !== "object" || !params) {
@@ -40,6 +44,10 @@ allImages.forEach(function (img) {
 
     if (params.selectorWidget) {
       self.selectorWidget = params.selectorWidget;
+    }
+
+    if(params.classSelector) {
+      self.classSelector = params.classSelector;
     }
 
     self.showWidget();
@@ -55,7 +63,7 @@ allImages.forEach(function (img) {
       selectorAsBtn.addEventListener("click", function (e) {
         e.preventDefault();
         if (selectorAsWidget) {
-          selectorAsWidget.classList.add("show_listview");
+          selectorAsWidget.classList.add(self.classSelector);
         }
       });
     }
@@ -71,7 +79,7 @@ allImages.forEach(function (img) {
         event.target.parentNode != selectorAsWidget
       ) {
         if(selectorAsWidget) {
-          selectorAsWidget.classList.remove("show_listview");
+          selectorAsWidget.classList.remove(self.classSelector);
         }
       }
     });
@@ -80,19 +88,20 @@ allImages.forEach(function (img) {
   window.KtWidget = KtWidget;
 })();
 
-new KtWidget({ selectorOpen: "#card-listopen-1", selectorWidget: "#card-listview-1" });
-new KtWidget({ selectorOpen: "#card-listopen-2", selectorWidget: "#card-listview-2" });
-new KtWidget({ selectorOpen: "#card-listopen-3", selectorWidget: "#card-listview-3" });
-new KtWidget({ selectorOpen: "#card-listopen-4", selectorWidget: "#card-listview-4" });
-new KtWidget({ selectorOpen: "#card-listopen-5", selectorWidget: "#card-listview-5" });
-new KtWidget({ selectorOpen: "#card-listopen-6", selectorWidget: "#card-listview-6" });
-new KtWidget({ selectorOpen: "#card-listopen-7", selectorWidget: "#card-listview-7" });
-new KtWidget({ selectorOpen: "#card-listopen-8", selectorWidget: "#card-listview-8" });
-new KtWidget({ selectorOpen: "#card-listopen-9", selectorWidget: "#card-listview-9" });
-new KtWidget({ selectorOpen: "#card-listopen-10", selectorWidget: "#card-listview-10" });
-new KtWidget({ selectorOpen: "#card-listopen-11", selectorWidget: "#card-listview-11" });
-new KtWidget({ selectorOpen: "#card-listopen-12", selectorWidget: "#card-listview-12" });
-new KtWidget({ selectorOpen: "#card-listopen-13", selectorWidget: "#card-listview-13" });
-new KtWidget({ selectorOpen: "#card-listopen-14", selectorWidget: "#card-listview-14" });
-new KtWidget({ selectorOpen: "#card-listopen-15", selectorWidget: "#card-listview-15" });
-new KtWidget({ selectorOpen: "#card-listopen-16", selectorWidget: "#card-listview-16" });
+new KtWidget({ selectorOpen: "#card-listopen-1", selectorWidget: "#card-listview-1", classSelector: "show_listview" });
+new KtWidget({ selectorOpen: "#card-listopen-2", selectorWidget: "#card-listview-2", classSelector: "show_listview" });
+new KtWidget({ selectorOpen: "#card-listopen-3", selectorWidget: "#card-listview-3", classSelector: "show_listview" });
+new KtWidget({ selectorOpen: "#card-listopen-4", selectorWidget: "#card-listview-4", classSelector: "show_listview" });
+new KtWidget({ selectorOpen: "#card-listopen-5", selectorWidget: "#card-listview-5", classSelector: "show_listview" });
+new KtWidget({ selectorOpen: "#card-listopen-6", selectorWidget: "#card-listview-6", classSelector: "show_listview" });
+new KtWidget({ selectorOpen: "#card-listopen-7", selectorWidget: "#card-listview-7", classSelector: "show_listview" });
+new KtWidget({ selectorOpen: "#card-listopen-8", selectorWidget: "#card-listview-8", classSelector: "show_listview" });
+new KtWidget({ selectorOpen: "#card-listopen-9", selectorWidget: "#card-listview-9", classSelector: "show_listview" });
+new KtWidget({ selectorOpen: "#card-listopen-10", selectorWidget: "#card-listview-10", classSelector: "show_listview" });
+new KtWidget({ selectorOpen: "#card-listopen-11", selectorWidget: "#card-listview-11", classSelector: "show_listview" });
+new KtWidget({ selectorOpen: "#card-listopen-12", selectorWidget: "#card-listview-12", classSelector: "show_listview" });
+new KtWidget({ selectorOpen: "#card-listopen-13", selectorWidget: "#card-listview-13", classSelector: "show_listview" });
+new KtWidget({ selectorOpen: "#card-listopen-14", selectorWidget: "#card-listview-14", classSelector: "show_listview" });
+new KtWidget({ selectorOpen: "#card-listopen-15", selectorWidget: "#card-listview-15", classSelector: "show_listview" });
+new KtWidget({ selectorOpen: "#card-listopen-16", selectorWidget: "#card-listview-16", classSelector: "show_listview" });
+new KtWidget({ selectorOpen: "#navbar_open", selectorWidget: "#navbar_drop", classSelector: "show_dropdown" });

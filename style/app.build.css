@@ -213,105 +213,46 @@ body {
       height: 3.5rem;
       border-radius: 50%;
       object-fit: cover; }
+  .navbar__dropdown {
+    position: absolute;
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    right: 20px;
+    top: 55px;
+    opacity: 0;
+    visibility: hidden; }
+    .navbar__dropdown--link {
+      text-decoration: none;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #757575;
+      padding: 0.8rem 0.6rem;
+      cursor: pointer;
+      transition: background-color 0.3s; }
+      .navbar__dropdown--link:hover {
+        background-color: #EEEEEE; }
 
 .nav_shadow {
   box-shadow: 0px 2px 15px -2px rgba(0, 0, 0, 0.15); }
 
-.wtt {
-  visibility: hidden;
-  opacity: 0; }
-  .wtt__wrapper {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: fixed;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15));
-    z-index: 999; }
-  .wtt__container {
-    background-color: #fff;
-    border-radius: 0.3rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40rem; }
-  .wtt__titlebox {
-    padding: 1rem 0.5rem; }
-    .wtt__titlebox--text {
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: #757575; }
-  .wtt__listbox {
-    display: flex;
-    flex-direction: column;
-    padding: 0 0.5rem;
-    overflow-y: auto; }
-  .wtt__card {
-    display: flex;
-    flex-direction: row;
-    padding: 1.1rem 0.3rem;
-    background-color: #fff;
-    border-radius: 0.3rem;
-    margin: 0.6rem 0;
-    cursor: pointer;
-    border: 1px solid #E0E0E0;
-    transition: all 0.3s; }
-    .wtt__card:hover {
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); }
-  .wtt__profilebox {
-    margin: 0 1rem; }
-    .wtt__profilebox--img {
-      width: 4rem;
-      height: 4rem;
-      border-radius: 50%;
-      object-fit: cover; }
-  .wtt__textview--title {
-    font-size: 1.6rem;
-    letter-spacing: 0.055rem;
-    font-weight: 600;
-    color: #757575; }
-  .wtt__textview--smtext {
-    font-size: 1rem;
-    font-weight: 300;
-    font-style: italic;
-    color: #4CAF50; }
-  .wtt__footer {
-    padding: 1rem 0.5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end; }
-    .wtt__footer--button {
-      padding: 0.8rem 1.5rem;
-      border: none;
-      margin: 0 0.4rem;
-      text-transform: uppercase;
-      letter-spacing: 0.033rem;
-      border-radius: 0.3rem;
-      cursor: pointer; }
-
-.wtt__hide {
-  display: none; }
-
-.theme-blue {
-  background-color: #2196F3;
-  color: #fff; }
-
-.theme-grey {
-  background-color: #BDBDBD;
-  color: #333; }
+.show_dropdown {
+  visibility: visible;
+  opacity: 1; }
 
 .sidenav {
   height: 100%;
-  background-color: #f44336;
+  background-image: linear-gradient(#f44336, #f44336);
   top: 0;
   left: 0;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-bottom-right-radius: 2.5rem; }
+  border-bottom-right-radius: 3.5rem; }
   .sidenav__container {
     display: flex;
     flex-direction: column;
@@ -320,7 +261,7 @@ body {
     padding: 0 0.5rem;
     height: 100%; }
   .sidenav__iconview {
-    fill: #EEEEEE;
+    fill: #F5F5F5;
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
