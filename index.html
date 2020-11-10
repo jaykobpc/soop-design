@@ -19,7 +19,8 @@
             <aside class="sidenav">
                 <div class="sidenav__container">
                     <div id="sidenav_explore" class="sidenav__iconview">
-                        <svg title="Explore" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                        <svg title="Explore" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24"
+                            width="24">
                             <path d="M0 0h24v24H0z" fill="none" />
                             <path
                                 d="M12 10.9c-.61 0-1.1.49-1.1 1.1s.49 1.1 1.1 1.1c.61 0 1.1-.49 1.1-1.1s-.49-1.1-1.1-1.1zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm2.19 12.19L6 18l3.81-8.19L18 6l-3.81 8.19z" />
@@ -27,7 +28,7 @@
                         <div id="sidenav_explore_open" class="sidenav__navlist">
                             <div class="sidenav__card">
                                 <div class="sidenav__imgbox">
-                                   <span class="sidenav__imgbox--text">R</span>
+                                    <span class="sidenav__imgbox--text">R</span>
                                 </div>
                                 <div class="sidenav__textview">
                                     <h3 class="sidenav__textview--title">Rossana</h3>
@@ -36,7 +37,7 @@
                             </div>
                             <div class="sidenav__card">
                                 <div class="sidenav__imgbox">
-                                   <span class="sidenav__imgbox--text">M</span>
+                                    <span class="sidenav__imgbox--text">M</span>
                                 </div>
                                 <div class="sidenav__textview">
                                     <h3 class="sidenav__textview--title">Manjaro</h3>
@@ -62,7 +63,7 @@
                             </g>
                         </svg>
                     </div>
-                    <div title="End session" class="sidenav__iconview">
+                    <div id="exit-btn" title="End session" class="sidenav__iconview">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
                             <path d="M0 0h24v24H0z" fill="none" />
                             <path
@@ -84,7 +85,8 @@
                         </div>
                         <div class="navbar__widgets">
                             <div class="navbar__profile">
-                                <img id="navbar_open" src="./img/profile_image.jpeg" alt="Profile" class="navbar__profile--img">
+                                <img id="navbar_open" src="./img/profile_image.jpeg" alt="Profile"
+                                    class="navbar__profile--img">
                                 <div id="navbar_drop" class="navbar__dropdown">
                                     <a href="#" class="navbar__dropdown--link">My Profile</a>
                                     <a href="#" class="navbar__dropdown--link">Logout</a>
@@ -506,6 +508,21 @@
                     </div>
                 </section>
             </main>
+            <!-- modal exit-->
+            <div id="exit-modal" class="mt__wrapper">
+                <div class="mt__container">
+                    <div class="mt__imagebox">
+                        <img src="./img/profile_image.jpeg" alt="" class="mt__imagebox--img">
+                    </div>
+                    <div class="mt__textview">
+                        <h3 class="mt__textview--text">Lou Lou</h3>
+                    </div>
+                    <div class="mt__footer">
+                        <button class="mt__footer--btn">Cancel</button>
+                        <a href="#/" class="mt__footer--linkbtn">Logout</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

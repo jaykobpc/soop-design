@@ -25,7 +25,7 @@ allImages.forEach(function (img) {
 });
 
 
-(function () {
+;(function () {
   "use strict";
 
   function KtWidget(params) {
@@ -108,4 +108,5 @@ new KtWidget({ selectorOpen: "#navbar_open", selectorWidget: "#navbar_drop", cla
 new KtWidget({ selectorOpen: "#navbar_open", selectorWidget: "#navbar_drop", classSelector: "show_dropdown" });
 new KtWidget({ selectorOpen: "#sidenav_explore", selectorWidget: "#sidenav_explore_open", classSelector: "show_side" });
 
+new KtWidget({ selectorOpen: "#exit-btn", selectorWidget: "#exit-modal", classSelector: "show_exit_modal" });
 
