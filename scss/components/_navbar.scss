@@ -22,6 +22,11 @@
         fill: $color-grey-600;
         transition: all 0.3s;
         cursor: pointer;
+        display: none;
+
+        @include respond(tab-port){
+            display: block;
+        }
 
         &:hover {
             background-color: $color-grey-300;

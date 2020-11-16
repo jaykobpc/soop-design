@@ -1,6 +1,9 @@
 var nav_bar = document.querySelector("#navbar");
 var wx_mainview = document.querySelector("#wxmainview");
 var allImages = document.querySelectorAll("img");
+var mobileNavBtn = document.querySelector("#mobilenav");
+var mobileNavContainer = document.querySelector("#mobile-side-nav");
+var mobileNavItem = document.querySelectorAll(".mobilesidenav__itemtab");
 
 if (wx_mainview) {
   wx_mainview.addEventListener("scroll", function (e) {
@@ -23,6 +26,30 @@ allImages.forEach(function (img) {
     e.preventDefault();
   })
 });
+
+if(mobileNavItem) {
+  mobileNavItem.forEach(function(btn) {
+    btn.addEventListener("click", function(e) {
+      e.stopPropagation()
+    })
+  })
+}
+
+if(mobileNavBtn) {
+  mobileNavBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    mobileNavContainer.classList.add("mobilenav_open");
+  });
+}
+
+if(mobileNavContainer) {
+  mobileNavContainer.addEventListener("click", function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+    mobileNavContainer.classList.remove("mobilenav_open");
+  })
+}
 
 
 ;(function () {
@@ -110,6 +137,5 @@ new KtWidget({ selectorOpen: "#card-listopen-16", selectorWidget: "#card-listvie
 new KtWidget({ selectorOpen: "#navbar_open", selectorWidget: "#navbar_drop", classSelector: "show_dropdown" });
 new KtWidget({ selectorOpen: "#navbar_open", selectorWidget: "#navbar_drop", classSelector: "show_dropdown" });
 new KtWidget({ selectorOpen: "#sidenav_explore", selectorWidget: "#sidenav_explore_open", classSelector: "show_side" });
-
 new KtWidget({ selectorOpen: "#exit-btn", selectorWidget: "#exit-modal", classSelector: "show_exit_modal" });
 

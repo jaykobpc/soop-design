@@ -1,0 +1,78 @@
+.mobilesidenav {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    position: fixed;
+    background: linear-gradient(
+        rgba($color-dark-300, 0.15),
+        rgba($color-dark-300, 0.15)
+    );
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+
+    &__container {
+        background-color: $color-white;
+        position: fixed;
+        height: 100%;
+        left: 0;
+        width: 25rem;
+        transform: translateX(-500px);
+        transition: all 0.3s ease-in-out;
+    }
+
+    &__imgbox {
+        padding: 0.5rem 0rem;
+
+        &--img {
+            object-fit: cover;
+            width: 13rem;
+            margin: 0 auto;
+        }
+    }
+
+    &__listview {
+        padding: 1rem 0rem;
+        overflow-y: auto;
+    }
+
+    &__itemtab {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0.3rem 0;
+        padding: 1.7rem 2.7rem;
+        background-color: $color-white;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-grey-100;
+        }
+
+        &--iconview {
+            fill: $color-grey-600;
+        }
+
+        &--text {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-left: 2.5rem;
+            color: $color-grey-600;
+        }
+    }
+}
+
+.mobilenav_open.mobilesidenav {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobilenav_open .mobilesidenav__container {
+    transform: translateX(0);
+}
