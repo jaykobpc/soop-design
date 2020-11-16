@@ -12,6 +12,8 @@
 
 .wxcontainer {
     padding: 2rem 1.5rem;
+    max-width: 170rem;
+    margin: 0 auto;
 
     @include respond(tab-port) {
         padding: 1.5rem 1rem;

@@ -515,7 +515,9 @@ body {
   overflow-y: auto; }
 
 .wxcontainer {
-  padding: 2rem 1.5rem; }
+  padding: 2rem 1.5rem;
+  max-width: 170rem;
+  margin: 0 auto; }
   @media only screen and (max-width: 56.25em) {
     .wxcontainer {
       padding: 1.5rem 1rem; } }
