@@ -75,12 +75,16 @@ body {
   background-color: #fff;
   cursor: pointer;
   transition: opacity 0.3s ease-in-out; }
-  @media only screen and (max-width: 950px) {
+  @media only screen and (max-width: 56.25em) {
     .cardview {
-      flex: 1 0 30%; } }
+      flex: 1 1 33.33%;
+      margin: 0.5rem 0.5rem;
+      padding: 1.3rem 1.3rem; } }
   @media only screen and (max-width: 37.5em) {
     .cardview {
-      flex: 1 0 35%; } }
+      flex: none;
+      width: 100%;
+      margin: 0.5rem 0; } }
   .cardview:hover {
     border: 1px solid transparent;
     box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.15); }
@@ -176,6 +180,17 @@ body {
     align-items: center;
     width: 100%;
     padding: 0.8rem 0.8rem; }
+  .navbar__iconview {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    text-align: center;
+    padding: 0.5rem 0.3rem;
+    fill: #757575;
+    transition: all 0.3s;
+    cursor: pointer; }
+    .navbar__iconview:hover {
+      background-color: #E0E0E0; }
   .navbar__logo {
     margin: 0;
     padding: 0; }
@@ -184,6 +199,9 @@ body {
   .navbar__searchbox {
     margin-left: -1.5rem;
     width: 550px; }
+    @media only screen and (max-width: 56.25em) {
+      .navbar__searchbox {
+        display: none; } }
     .navbar__searchbox--input {
       width: 100%;
       padding: 1rem 0.8rem;
@@ -349,6 +367,9 @@ body {
   justify-content: center;
   align-items: center;
   border-bottom-right-radius: 3.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .sidenav {
+      display: none; } }
   .sidenav__container {
     display: flex;
     flex-direction: column;
@@ -432,6 +453,9 @@ body {
 
 .wxcontainer {
   padding: 2rem 1.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .wxcontainer {
+      padding: 1.5rem 1rem; } }
   .wxcontainer__titlebox {
     padding: 1rem 0rem; }
     .wxcontainer__titlebox--text {
@@ -443,5 +467,4 @@ body {
   .wxcontainer__gridview {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-right: -1rem; }
+    justify-content: flex-start; }

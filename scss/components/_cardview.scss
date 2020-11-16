@@ -11,15 +11,19 @@
   border: 1px solid $color-grey-300;
   background-color: $color-white;
   cursor: pointer;
-  //border-left: 3px solid $color-green-500;
   transition: opacity 0.3s ease-in-out;
 
-  @include respond(tab-wide) {
-    flex: 1 0 30%;
+  @include respond(tab-port) {
+    // flex: 1 0 30%;
+    flex: 1 1 33.33%;
+    margin: 0.5rem 0.5rem;
+    padding: 1.3rem 1.3rem;
   }
 
   @include respond(phone) {
-    flex: 1 0 35%;
+    flex: none;
+    width: 100%;
+    margin: 0.5rem 0;
   }
 
 

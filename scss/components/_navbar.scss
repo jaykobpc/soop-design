@@ -13,6 +13,21 @@
         padding: 0.8rem 0.8rem;
     }
 
+    &__iconview {
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        text-align: center;
+        padding: 0.5rem 0.3rem;
+        fill: $color-grey-600;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-grey-300;
+        }
+    }
+
     &__logo {
         margin: 0;
         padding: 0;
@@ -25,6 +40,10 @@
     &__searchbox {
         margin-left: -1.5rem;
         width: 550px;
+
+        @include respond(tab-port) {
+            display: none;
+        }
 
         &--input {
             width: 100%;

@@ -32,6 +32,8 @@ allImages.forEach(function (img) {
     this.selectorOpen = null;
     this.selectorWidget = null;
     this.classSelector = null;
+    this.useCloseBtn = false;
+    this.selectorClose = null;
     var self = this;
 
     if (typeof params !== "object" || !params) {
@@ -87,6 +89,7 @@ allImages.forEach(function (img) {
 
   window.KtWidget = KtWidget;
 })();
+
 
 new KtWidget({ selectorOpen: "#card-listopen-1", selectorWidget: "#card-listview-1", classSelector: "show_listview" });
 new KtWidget({ selectorOpen: "#card-listopen-2", selectorWidget: "#card-listview-2", classSelector: "show_listview" });
