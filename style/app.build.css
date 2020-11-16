@@ -56,6 +56,11 @@ img {
   position: absolute;
   background-color: #f7fafc; }
 
+.preload {
+  transition: none;
+  visibility: hidden;
+  opacity: 0; }
+
 body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;

@@ -20,6 +20,13 @@ if (wx_mainview) {
   });
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+  if(document.body.classList.contains("preload")) {
+    document.body.classList.remove("preload");
+  }
+})
+
+
 allImages.forEach(function (img) {
   img.setAttribute("draggable", false);
   img.addEventListener("contextmenu", function(e) {
