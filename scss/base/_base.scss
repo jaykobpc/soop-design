@@ -54,6 +54,6 @@ img {
 }
 
 
-.preload {
-  transition: none;
+.preload * {
+  transition: none !important;
 }

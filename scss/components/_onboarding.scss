@@ -1,0 +1,73 @@
+.apploader {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  position: fixed;
+  overflow: hidden;
+  background-color: $color-white;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+
+  &__container {
+    top: 48%;
+    left: 50%;
+    position: absolute;
+    width: 50rem;
+    transform: translate(-50%, -50%);
+    background-color: inherit;
+    padding: 0.5rem;
+  }
+
+  &__imgbox {
+    margin: 0 auto;
+
+    &--img {
+      margin: 0 auto;
+      object-fit: cover;
+      width: 30rem;
+
+      animation-name: animate_hover;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+  }
+
+  &__progressloader {
+    width: 10rem;
+    margin: 0 auto;
+  }
+}
+
+.progressbar {
+  background-color: $color-grey-200;
+  padding: 0rem;
+
+  &__innerbar {
+    padding: 0.2rem;
+    background-color: $color-red-500;
+  }
+}
+
+.loader-fade.apploader {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes animate_hover {
+  0% {
+    transform: translateY(-18px);
+  }
+
+  50% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-18px);
+  }
+}
