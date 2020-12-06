@@ -587,4 +587,5 @@ body {
   .wxcontainer__gridview {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; }
+    justify-content: flex-start;
+    padding-bottom: 2.5rem; }
