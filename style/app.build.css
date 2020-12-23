@@ -59,6 +59,11 @@ img {
 .preload * {
   transition: none !important; }
 
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
 body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -279,10 +284,7 @@ body {
       border-radius: 0.3rem;
       font-family: inherit;
       color: #757575;
-      transition: all 0.3s ease-in-out;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none; }
+      transition: all 0.3s ease-in-out; }
       .navbar__searchbox--input:hover {
         border: 1px solid #BDBDBD; }
       .navbar__searchbox--input:focus {

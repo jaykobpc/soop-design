@@ -60,9 +60,6 @@
             font-family: inherit;
             color: $color-grey-600;
             transition: all 0.3s ease-in-out;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
 
             &:hover {
                 border: 1px solid $color-grey-400;

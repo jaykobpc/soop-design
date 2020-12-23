@@ -41,7 +41,6 @@ img {
   user-select: text; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
-
 #app {
   top: 0;
   left: 0;
@@ -53,7 +52,12 @@ img {
   background-color: #f7fafc;
 }
 
-
 .preload * {
   transition: none !important;
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
